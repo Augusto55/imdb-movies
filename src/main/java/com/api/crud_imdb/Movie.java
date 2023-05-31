@@ -3,7 +3,7 @@ package com.api.crud_imdb;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "movies")
+@Table(name = "movie_basics")
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
