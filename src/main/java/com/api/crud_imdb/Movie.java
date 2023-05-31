@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 @Table(name = "movies")
 public class Movie {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private String tconst;
     private String titleType;
     private String primaryTitle;
