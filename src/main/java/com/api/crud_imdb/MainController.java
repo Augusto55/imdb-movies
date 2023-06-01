@@ -24,14 +24,6 @@ public class MainController {
         Movie movie = movieService.getMovie(id);
         return new ResponseEntity<Movie>(movie, HttpStatus.OK);
     }
-    @GetMapping("/last/{id}")
-    public ResponseEntity<Movie> getLastIdTest(@PathVariable String id) {
-        Movie movie = movieService.getMovie(id);
-//        String lastId = movieService.getLastId();
-//        System.out.println(lastId);
-        return new ResponseEntity<Movie>(movie, HttpStatus.OK);
-    }
-
 
     @PostMapping("/add")
     public void add(@RequestBody Movie movie) {
@@ -50,7 +42,6 @@ public class MainController {
     }
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
-
         movieService.deleteMovie(id);
     }
 

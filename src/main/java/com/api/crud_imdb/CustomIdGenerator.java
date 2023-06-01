@@ -8,17 +8,20 @@ import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
-@Component
 public class CustomIdGenerator implements IdentifierGenerator {
-    @Autowired
-    private MovieService movieService;
-    String prefix = "tt";
 
-    String id = movieService.getLastId();
-    Integer newId = Integer.parseInt(id)+1;
+    private MovieService movieService;
+    private String prefix = "tt";
 
     @Override
     public Serializable generate(SharedSessionContractImplementor session, Object object) throws HibernateException {
+        if (movieService == null) {
+            movieService = ApplicationContextProvider.getBean(MovieService.class);
+        }
+
+        String id = movieService.getLastId();
+        String newString = id.replace("tt", "");
+        Integer newId = Integer.parseInt(newString) + 1;
 
         return prefix + newId;
     }
