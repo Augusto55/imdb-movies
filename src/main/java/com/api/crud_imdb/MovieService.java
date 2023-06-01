@@ -4,6 +4,7 @@ import com.api.crud_imdb.Movie;
 import com.api.crud_imdb.MovieRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,16 +19,16 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-    public void saveMovie(Movie user) {
-        movieRepository.save(user);
-    }
-
-    public Movie getMovie(Integer id) {
+//    public void saveMovie(Movie user) {
+//        movieRepository.save(user);
+//    }
+//
+    public Movie getMovie(String id) {
         return movieRepository.findById(id).get();
     }
-
-    public void deleteMovie(Integer id) {
-        movieRepository.deleteById(id);
-    }
+//
+//    public void deleteMovie(String id) {
+//        movieRepository.deleteById(id);
+//    }
 
 }

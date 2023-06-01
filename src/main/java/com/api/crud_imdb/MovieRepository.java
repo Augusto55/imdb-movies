@@ -2,5 +2,7 @@ package com.api.crud_imdb;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface MovieRepository  extends CrudRepository<Movie, Integer> {
+import java.util.List;
+
+public interface MovieRepository  extends CrudRepository<Movie, String> {
 }
