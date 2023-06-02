@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.NoSuchElementException;
 
-@RestController // This means that this class is a Controller
-@RequestMapping("/movies") // This means URL's start with /demo (after Application path)
+@RestController
+@RequestMapping("/movies")
 public class MainController {
     @Autowired
     private MovieService movieService;
