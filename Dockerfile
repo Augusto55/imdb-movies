@@ -1,8 +1,7 @@
 FROM maven:3.8.2-openjdk-17
 
 WORKDIR /crud_imdb
-COPY . .
 
-RUN mvn clean install -DskipTests
+COPY target/crud_imdb-0.0.1-SNAPSHOT.jar /crud_imdb/crud_imdb-0.0.1-SNAPSHOT.jar
 
-CMD mvn spring-boot:run
+ENTRYPOINT ["java", "-jar", "crud_imdb-0.0.1-SNAPSHOT.jar"]
