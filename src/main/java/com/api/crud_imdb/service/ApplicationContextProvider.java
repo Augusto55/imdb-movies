@@ -1,4 +1,4 @@
-package com.api.crud_imdb;
+package com.api.crud_imdb.service;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

@@ -1,4 +1,4 @@
-package com.api.crud_imdb;
+package com.api.crud_imdb.domains;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -8,7 +8,7 @@ import org.hibernate.annotations.GenericGenerator;
 public class Movie {
     @Id
     @Column(name="tconst")
-    @GenericGenerator(name="custom_id", strategy = "com.api.crud_imdb.CustomIdGenerator")
+    @GenericGenerator(name="custom_id", strategy = "com.api.crud_imdb.service.CustomIdGenerator")
     @GeneratedValue(generator = "custom_id")
     private String tconst;
     @Column(name="titletype")

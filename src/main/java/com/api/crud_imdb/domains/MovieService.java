@@ -1,13 +1,8 @@
-package com.api.crud_imdb;
+package com.api.crud_imdb.domains;
 
-import com.api.crud_imdb.Movie;
-import com.api.crud_imdb.MovieRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @Transactional
